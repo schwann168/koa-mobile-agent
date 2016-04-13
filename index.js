@@ -41,8 +41,8 @@ module.exports = function (options) {
      * check mobile with user-agent
      */
     function checkUserAgent(ctx) {
-        const userAgent = ctx.headers['user-agent'].toLowerCase();
-        return userAgent.match(/(iphone|ipod|ipad|android|phone|pad|pod|mobile)/);
+        const userAgent = ctx.headers['user-agent'];
+        return userAgent.match(/(iphone|ipod|ipad|android|phone|pad|pod|mobile)/ig);
     }
 
 };
