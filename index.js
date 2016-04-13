@@ -22,7 +22,7 @@ module.exports = function (options) {
         let targetUrl = null;
 
         for (let i = 0; i < routes.length; i++) {
-            if (routes[i].path == path) {
+            if (routes[i].path.toLowerCase() == path.toLowerCase()) {
                 targetUrl = routes[i].target;
                 break;
             }
