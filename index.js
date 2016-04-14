@@ -42,7 +42,9 @@ module.exports = function (options) {
      */
     function checkUserAgent(ctx) {
         const userAgent = ctx.headers['user-agent'];
-        return userAgent.match(/(iphone|ipod|ipad|android|phone|pad|pod|mobile)/ig);
+        if (userAgent)
+            return userAgent.match(/(iphone|ipod|ipad|android|phone|pad|pod|mobile)/ig);
+        return false;
     }
 
 };
